@@ -1,0 +1,27 @@
+// // // // // // RESET
+/*RESET*/
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url(../resources/bannerwaves2.svg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: var(--font-family-primary);
+}
+
+section {
+    scroll-snap-align: start;
+}
+
+ul,
+ul a {
+    padding: 0;
+    text-decoration: none;
+    color: black;
+}

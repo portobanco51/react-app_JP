@@ -1,0 +1,17 @@
+// VARIABLES
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+:root{
+    --color-gradient: linear-gradient(rgba(0, 0, 0, 0) 70%,rgba(60, 60, 60, 0.4));
+    --bg-color-clear: #F9F3E4;
+    --bg-color-lightblue: #CFE5F0;
+    --bg-color-teal: #67D6D5;
+    --bg-color-green: #98C2B5;
+    --bg-color-hover: rgb(243, 240, 228);
+    --font-family-primary: 'Advent Pro', sans-serif;
+    --font-family-secondary: 'Montserrat', sans-serif;
+    --transition-cubic: all cubic-bezier(0.51, 2.1, 0.54, 0.03) 400ms;
+}

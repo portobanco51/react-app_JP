@@ -1,0 +1,37 @@
+/* Grid Names */
+//  UTILITY CLASSES
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 12rem min-content 1fr 40px;
+    grid-template-areas:
+        "nav"
+        "main"
+        "aside"
+        "footer";
+    column-gap: 1rem;
+    height: 100vh;
+    justify-content: center;
+    justify-items: center;
+}
+
+.grid--contact {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 12rem 1fr 40px;
+    grid-template-areas:
+        "nav"
+        "main"
+        "footer";
+    column-gap: 1rem;
+    height: 100vh;
+    justify-content: center;
+    justify-items: center;
+}
+
+.container {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
+}

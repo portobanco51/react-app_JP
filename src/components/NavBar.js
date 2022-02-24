@@ -1,6 +1,7 @@
+
 function NavBar() {
     return (
-        <header>
+        <div>
             <p>Entre Olas</p>
             <ul>
                 <a href="../index.html"><li>Inicio</li></a>
@@ -8,7 +9,7 @@ function NavBar() {
                 <a href="../index.html"><li>Carrito</li></a>
                 <a href="../index.html"><li>Contact</li></a>
             </ul>
-        </header>
+        </div>
     )
 }
 

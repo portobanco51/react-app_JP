@@ -4,7 +4,9 @@ import Footer from './Footer';
 function App() {
     return (<>
         <Header />
-        <Main />
+        <Main
+            nombre="Canalla"
+            apellido="González" />
         <Footer />
     </>)
 };

@@ -1,12 +1,10 @@
-import React from 'react'
-import "./logo.png";
+import React from 'react';
 const NavIcon = () => {
     return (<>
         <div>
-            <img src='./logo.png' alt="Icono de Entre Olas" />
+            <i class="fa-solid fa-cart-shopping"></i>
         </div>
-    </>
-    )
+    </>)
 }
 
 export default NavIcon

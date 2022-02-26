@@ -115,7 +115,7 @@ ul a {
   grid-area: header;
   display: flex;
   justify-content: center;
-  margin-inline: 1rem; }
+  margin-top: 1rem; }
 
 .header__icon--home {
   margin-left: 0.5rem; }

@@ -1,5 +1,5 @@
 import React from 'react';
-const NavIcon = () => {
+const CartWidget = () => {
     return (<>
         <div>
             <i className='fa-solid fa-cart-shopping nav__icon'></i>
@@ -7,4 +7,4 @@ const NavIcon = () => {
     </>)
 }
 
-export default NavIcon
+export default CartWidget

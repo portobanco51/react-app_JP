@@ -5,8 +5,8 @@ function App() {
     return (<>
         <Header />
         <Main
-            nombre="Canalla"
-            apellido="González" />
+            nombre="Valeria"
+            apellido="Morales" />
         <Footer />
     </>)
 };

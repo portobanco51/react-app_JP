@@ -1,11 +1,11 @@
 import React from 'react'
 import NavBar from './NavBar';
-import NavIcon from './NavIcon';
+import CartWidget from './CartWidget';
 
 const Header = () => {
     return (<>
         <header className='header'>
-            <NavIcon />
+            <CartWidget />
             <NavBar />
         </header>
     </>

@@ -5,7 +5,7 @@ export function ItemCount(props) {
     const [counter, setCounter] = useState(props.initial);
 
     const onAdd = () => {
-        console.log(`${counter} items agregados al Carrito`)
+        console.log(`${counter} items agregados`)
     }
 
     function Increase() {

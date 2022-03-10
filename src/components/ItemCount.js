@@ -21,6 +21,7 @@ export function ItemCount(props) {
         <button onClick={Decrease} disabled={counter === props.initial}>-</button>
         <button onClick={Reset}>Resetear Cantidad</button>
         <button onClick={Increase} disabled={counter === props.stock}>+</button><br></br>
+        <button onClick={props.onAdd}>Agregar al Carrito</button>
     </>
     )
 }

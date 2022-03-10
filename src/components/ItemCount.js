@@ -4,10 +4,6 @@ export function ItemCount(props) {
 
     const [counter, setCounter] = useState(props.initial);
 
-    const onAdd = () => {
-        console.log(`${counter} items agregados`)
-    }
-
     function Increase() {
         setCounter(counter + 1);
     }
@@ -25,8 +21,6 @@ export function ItemCount(props) {
         <button onClick={Decrease} disabled={counter === props.initial}>-</button>
         <button onClick={Reset}>Resetear Cantidad</button>
         <button onClick={Increase} disabled={counter === props.stock}>+</button><br></br>
-        <button onClick={onAdd} disabled={counter === 0}>Agregar al Carrito</button>
     </>
     )
-
 }

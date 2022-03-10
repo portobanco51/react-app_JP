@@ -1,6 +1,6 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
-export const Contador = () => {
+export const Counter = () => {
 
     const [dark, setDark] = useState(false)
 

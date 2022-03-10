@@ -5,14 +5,27 @@ export function ItemCount(props) {
     const [counter, setCounter] = useState(props.initial);
 
     function Increase() {
-        setCounter(counter + 1);
+        if (counter >= props.stock) {
+            return
+        } else {
+            setCounter(counter + 1);
+        }
     }
 
     function Decrease() {
-        setCounter(counter - 1);
+        if (counter === props.initial) {
+            return
+        } else {
+            setCounter(counter - 1);
+        }
     }
 
     function Reset() {
+        if (counter !== props.initial) {
+            setCounter(props.initial)
+        } else {
+            return
+        }
         setCounter(props.initial);
     }
 

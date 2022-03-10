@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { ItemCount } from "./ItemCount";
-// import { ItemList } from "./ItemList";
+import { ItemList } from "./ItemList";
 
 const onAdd = () => {
     console.log("Agregado al carrito")
@@ -53,7 +53,7 @@ export const ItemListContainer = ({ greeting }) => {
             <div className="itemListContainer">
                 <h2>{greeting}</h2>
                 <hr></hr>
-                {/* <ItemList items={items} /> */}
+                <ItemList items={items} />
                 <ItemCount initial={1} stock={5} onAdd={onAdd} />
             </div>
         </>

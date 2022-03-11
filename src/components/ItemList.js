@@ -6,7 +6,7 @@ export const ItemList = ({ items }) => {
             <ul className="itemList">
                 {
                     items.map(item => {
-                        return <Item item={item} />
+                        return <Item key={item.id.toString()} item={item} />
                     })
                 }
             </ul>

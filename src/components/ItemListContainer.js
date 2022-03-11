@@ -32,13 +32,13 @@ const itemPromise = new Promise((res, rej) => {
 
 export const ItemListContainer = ({ greeting }) => {
 
-    const [items, setItems] = useState([]);
+    const [list, setList] = useState([]);
 
     useEffect(() => {
 
         itemPromise
             .then((res) => {
-                setItems(initialItems)
+                setList(initialItems)
 
             })
             .catch((err) => {
@@ -46,14 +46,12 @@ export const ItemListContainer = ({ greeting }) => {
             })
     });
 
-    console.log(items)
-
     return (
         <>
             <div className="itemListContainer">
                 <h2>{greeting}</h2>
                 <hr></hr>
-                <ItemList items={items} />
+                <ItemList items={list} />
                 <ItemCount initial={1} stock={5} onAdd={onAdd} />
             </div>
         </>

@@ -1,5 +1,6 @@
 import { ItemListContainer } from "./ItemListContainer"
-import { Counter } from "./Counter"
+// import { Counter } from "./Counter"
+import { ItemDetailContainer } from "./ItemDetailContainer";
 
 const Main = (props) => {
 
@@ -7,7 +8,7 @@ const Main = (props) => {
         <main>
             <img src="/resources/logo.png" alt="logo" className="header__img"></img>
             <ItemListContainer greeting={`Bienvenida ${props.nombre} ${props.apellido}!`} />
-            <Counter />
+            <ItemDetailContainer />
         </main>
 
     </>

@@ -116,3 +116,20 @@
     margin-left: 1.1rem;
     transform: scale(1.5);
 }
+
+.d-flex {
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    gap: 0.5rem;
+    justify-content: space-evenly;
+}
+
+.item__list {
+    max-width: fit-content;
+    min-height: 25rem;
+}
+
+.card-icon {
+    max-width: 15rem;
+}

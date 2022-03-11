@@ -4,9 +4,10 @@ export const Item = ({ item }) => {
     return (<>
         <div>
             <li className='item'>
-                <div className='item_bottom'>
-                    <h3>{item.nombre}</h3>
-                    <p>Precio: $ {item.precio}</p>
+                <div className='item__list'>
+                    <h3>Title: {item.title}</h3>
+                    <p>Id: {item.id}</p>
+                    {/* <img src={item.thumbnailUrl} alt={item.id}></img> */}
                     <hr></hr>
                 </div>
             </li >

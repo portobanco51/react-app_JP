@@ -68,6 +68,10 @@
     }
 }
 
+#text {
+    text-decoration: none;
+}
+
 .header__item {
     display: inline-flex;
     flex-flow: column nowrap;
@@ -87,8 +91,9 @@
     display: none;
 }
 
-.header__link {
+.header__text {
     color: #000;
+    text-decoration: none;
 }
 
 // NAV ICONS

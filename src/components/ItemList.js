@@ -6,7 +6,7 @@ export const ItemList = ({ items }) => {
             <ul className="itemList d-flex">
                 {
                     items.map(item => {
-                        return <Item key={item.id.toString()} item={item} />
+                        return <Item key={item.id} item={item} />
                     })
                 }
             </ul>

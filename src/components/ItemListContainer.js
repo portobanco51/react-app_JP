@@ -49,7 +49,7 @@ export const ItemListContainer = ({ greeting }) => {
         }
 
         itemFetch()
-    });
+    }, []);
 
     return (
         <>

@@ -92,6 +92,9 @@ ul a {
   .header__list li:not(:first-child) {
     display: none; }
 
+#text {
+  text-decoration: none; }
+
 .header__item {
   display: inline-flex;
   flex-flow: column nowrap;
@@ -108,8 +111,9 @@ ul a {
 .header__icon--contact {
   display: none; }
 
-.header__link {
-  color: #000; }
+.header__text {
+  color: #000;
+  text-decoration: none; }
 
 .nav__icon {
   grid-area: header;

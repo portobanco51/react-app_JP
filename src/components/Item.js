@@ -15,7 +15,6 @@ export const Item = ({ item }) => {
                 <img className='header__img' src={item.thumbnailUrl} alt={item.id}></img>
                 <h5>Category: {item.cat}</h5>
                 <h4>Price: ${item.precio} </h4>
-                <hr></hr>
                 <ItemCount initial={1} stock={8} onAdd={onAdd} />
             </div>
         </li >

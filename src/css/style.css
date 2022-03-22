@@ -173,3 +173,15 @@ ul a {
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
   height: 100vh; }
+
+.amount {
+  margin-inline: 0.5rem; }
+
+.buttons {
+  display: flex;
+  justify-content: space-around;
+  margin: 0.25rem; }
+
+.add-btn,
+.rst-btn {
+  margin: 0.25rem; }

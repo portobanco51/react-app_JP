@@ -1,37 +1,40 @@
-import React from 'react'
 import { useState, useEffect } from "react";
-import { ItemDetail } from "./ItemDetail";
+import { useParams } from 'react-router-dom';
+// import { ItemDetail } from "./ItemDetail";
 
-const item = {
-    title: "Laptop HP",
-    descripcion: "Remera Tupac Shakur unisex",
-    url: "https://picsum.photos/id/0/600",
-    precio: 3200,
-    categoria: "vestir",
-    stock: 10
-}
+// const item = [{ title: "Poster Laptop", stock: 12, precio: 500, id: 1, cat: 'Casual', thumbnailUrl: "https://picsum.photos/id/0/600" }];
 
-const itemPromise = new Promise((res, rej) => {
-    setTimeout(() => {
-        res(item)
-    }, 3000);
-})
+// const itemsPromise = new Promise((res, rej) => {
+//     res(item)
+// })
+
 
 export const ItemDetailContainer = () => {
-    const [item, setItem] = useState({})
-    const getItem = () => {
-        return itemPromise
-    }
+    const [item, setItem] = useState([])
+    const { id } = useParams()
+
+    console.log(id)
 
     useEffect(() => {
-        getItem()
-            .then((data) => setItem(data))
-            .catch((err) => console.log(err))
-    })
+        const itemFetch = async () => {
+            try {
+                const res = await fetch('./items.json')
+                const items = await res.json()
+                console.log(items)
+                setItem(items)
 
-    return (
-        <div className='itemDetailContainer'>
-            <ItemDetail item={item} />
-        </div>
-    )
+            }
+            catch {
+                console.log('err')
+            };
+        }
+
+        itemFetch()
+
+        return (
+            <div className='itemDetailContainer'>
+                <h2> {item.title} </h2>
+            </div >
+        )
+    }, [id])
 }

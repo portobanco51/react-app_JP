@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export const Counter = () => {
+export const Counter = ({ stock, initial, onAdd }) => {
 
     const [dark, setDark] = useState(false)
 

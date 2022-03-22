@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 // import { ItemCount } from "./ItemCount";
 import { ItemList } from "./ItemList";
 
@@ -6,34 +7,12 @@ import { ItemList } from "./ItemList";
 //     console.log("Agregado al carrito")
 // }
 
-// let initialItems = [
-//     // {
-//     //     id: 1,
-//     //     nombre: "Producto 1",
-//     //     precio: 100
-//     // },
-//     // {
-//     //     id: 2,
-//     //     nombre: "Producto 2",
-//     //     precio: 200
-//     // },
-//     // {
-//     //     id: 3,
-//     //     nombre: "Producto 3",
-//     //     precio: 300
-//     // }
-// ];
-
-// const itemPromise = new Promise((res, rej) => {
-//     setTimeout(() => {
-//         res(initialItems)
-//     }, 2000)
-// })
-
 
 export const ItemListContainer = ({ greeting }) => {
 
     const [list, setList] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const { id } = useParams()
 
     useEffect(() => {
 
@@ -45,17 +24,24 @@ export const ItemListContainer = ({ greeting }) => {
             }
             catch {
                 console.log('err')
-            };
-        }
+            }
+            finally {
+                setLoading(false)
+            }
+        };
 
-        itemFetch()
-    }, []);
+        setTimeout(() => {
+            itemFetch();
+        }, 1000)
+
+    }, [id])
 
     return (
         <>
             <div className="itemListContainer">
-                <h2>{greeting}</h2>
-                <hr></hr>
+                {/* <h2>{greeting}</h2>
+                <hr></hr> */}
+                <p>{loading ? "Cargando ..." : "Ya tenes los productos"}</p>
                 <ItemList items={list} />
                 {/* <ItemCount initial={1} stock={5} onAdd={onAdd} /> */}
             </div>

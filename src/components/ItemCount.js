@@ -42,11 +42,14 @@ export function ItemCount(props) {
     }
 
     return (<>
-        <p>Cantidad de items a comprar: {counter} </p>
-        <button onClick={Decrease} disabled={counter === props.initial}>-</button>
-        <button onClick={Reset}>Resetear Cantidad</button>
-        <button onClick={Increase} disabled={counter === props.stock}>+</button><br></br>
-        <button onClick={onAdd}>Agregar al Carrito</button>
+        <p>Cantidad de items a comprar: </p>
+        <div className="buttons">
+            <button onClick={Decrease} disabled={counter === props.initial}>-</button>
+            <b className="amount">{counter}</b>
+            <button onClick={Increase} disabled={counter === props.stock}>+</button><br></br>
+        </div>
+        <button className="add-btn" onClick={onAdd} disabled={counter === props.stock}>Agregar al Carrito</button>
+        <button className="rst-btn" onClick={Reset} hidden={counter === props.initial}>Resetear</button>
     </>
     )
 }

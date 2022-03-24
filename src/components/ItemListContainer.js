@@ -41,7 +41,7 @@ export const ItemListContainer = ({ greeting }) => {
             <div className="itemListContainer">
                 {/* <h2>{greeting}</h2>
                 <hr></hr> */}
-                <p>{loading ? "Cargando ..." : "Ya tenes los productos"}</p>
+                <p>{loading ? "Cargando ..." : null}</p>
                 <ItemList items={list} />
                 {/* <ItemCount initial={1} stock={5} onAdd={onAdd} /> */}
             </div>

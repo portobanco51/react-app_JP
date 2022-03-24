@@ -1,9 +1,13 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { context } from "../App";
+
 
 export function ItemCount(props) {
 
 
     const [counter, setCounter] = useState(props.initial);
+    const result = useContext(context)
+    console.log(result)
 
     const onAdd = () => {
         if (counter === props.stock) {

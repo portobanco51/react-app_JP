@@ -13,12 +13,10 @@ export const ItemDetailContainer = () => {
     const [item, setItem] = useState([])
     const { id } = useParams()
 
-    console.log(id)
-
     useEffect(() => {
         const itemFetch = async () => {
             try {
-                const res = await fetch('./items.json')
+                const res = await fetch('../items.json')
                 const items = await res.json()
                 console.log(items)
                 setItem(items)
@@ -31,10 +29,13 @@ export const ItemDetailContainer = () => {
 
         itemFetch()
 
-        return (
-            <div className='itemDetailContainer'>
-                <h2> {item.title} </h2>
-            </div >
-        )
-    }, [id])
+    }, [])
+
+    return (<>
+        <div className='itemDetailContainer'>
+            <h2> hola {item[1]} </h2>
+        </div >
+
+    </>
+    )
 }
